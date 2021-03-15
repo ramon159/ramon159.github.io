@@ -7,6 +7,7 @@
 body {
     font-family: "Open Sans", Helvetica, sans-serif;
     color: var(--body-color);
+    line-height: 1.5; /* 1 */
 
 }
 a {
@@ -30,9 +31,10 @@ h1, h2, h3 {
 }
 
 .button {
+    margin-bottom: 1em;
     padding: 10px 20px;
-    background-color: black;
-    color: white;
+    background-color: tomato;
+    color: black;
 }
 
 
@@ -69,9 +71,9 @@ header {
     background-repeat:  no-repeat;
     background-position:  top;
     background-size: cover;
-    animation: clouds-anim 75s linear infinite;
     color: white;
     padding: 20px;
+    max-height: 400px;
 }
 
 header p {
@@ -136,6 +138,14 @@ footer {
     padding: 10px 0;
 }
 
+/* 
+MEDIA 
+QUERY 
+*/
+
+
+
+
 @media screen and (min-width: 767px) {
 
     /* nav */
@@ -153,7 +163,11 @@ footer {
     nav ul li {
         max-height: 36px;
     }
+    nav ul li a {
+        color: gray;
+    }
     nav ul li a:hover {
+        color: white;
         font-size: 110%;
         overflow:visible;
     }
