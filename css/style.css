@@ -1,0 +1,234 @@
+/* geral */
+:root {
+    --body-color: #4d4d4d;
+    --white: #f1f1f1;
+}
+
+body {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    color: var(--body-color);
+
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: "Roboto Slab", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.container, nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+
+/* nav */
+
+nav {
+    background-color: black;
+}
+nav > a {
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'Anton', serif;
+    color: var(--white);
+}
+nav ul {
+    width: 100%;
+    padding: 0;
+}
+nav ul li {
+    width: 100%;
+}
+nav ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    color: var(--white);
+    font-weight: 550;
+}
+
+/* header */
+
+header {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0, 0, 0.35), rgba(0,0, 0, 0.75), rgba(0,0, 0, 1)), url(../img/fundo.jpg);
+    background-repeat:  no-repeat;
+    background-position:  top;
+    background-size: cover;
+    animation: clouds-anim 75s linear infinite;
+    color: white;
+    padding: 20px;
+}
+
+header p {
+    margin-bottom: 2em;
+}
+
+/* about */
+
+#sobre {
+    background-color: black;
+    color:white;
+    padding: 0 20px 20px;
+    padding-top: 1.5em;
+}
+#sobre p {
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+#sobre .button {
+    background-color: white;
+    color:dimgrey;
+}
+
+/* serviços */
+
+#serviços {
+    padding: 20px;
+}
+#serviços div {
+    margin-top: 30px;
+}
+
+/* portfólio */
+
+#portfolio {
+    padding-top: 20px;
+}
+
+#portfolio h2 {
+    padding-bottom: 3vh;
+}
+
+#portfolio img {
+    width: 100%;
+}
+
+/* contato*/
+
+#contato {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#contato a {
+    color: black;
+}
+/* rodapé */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+@media screen and (min-width: 767px) {
+
+    /* nav */
+
+    nav {
+        max-height: 102px;
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+
+    nav ul{
+        width: 60%;
+        flex-direction: row;
+    }
+    nav ul li {
+        max-height: 36px;
+    }
+    nav ul li a:hover {
+        font-size: 110%;
+        overflow:visible;
+    }
+
+    /* header */
+
+    header {
+        height: 600px;
+        height: 60vh;
+    }
+    header h1 {
+        padding-top: 20vh;
+    }
+    header p {
+        padding: 0 15vh;
+    }
+    header .button{
+        background-color: tomato ; 
+        color: black;
+    }
+
+    /* sobre */
+    #sobre {
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    /* serviços */
+
+
+    #serviços {
+        flex-direction: row !important;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #serviços div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+    #serviços h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* portfolio */
+
+    #portfolio {
+        display: grid !important;
+        grid-template-columns: auto auto auto;
+    }
+    #portfolio h2 {
+        grid-column: 1/4;
+        width: 100%;
+    }
+
+    /* contato */
+
+    #contato {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        max-width: 500px;
+
+        
+    }
+    #contato h2,p {
+        flex: 100%
+    }
+}
+
+/* ideia: fazer imagem ficar se movendo enquanto uso o scroll */
